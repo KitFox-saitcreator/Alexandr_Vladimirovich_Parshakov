@@ -12,50 +12,60 @@
       }
 
       body {
-         /* Приятный градиентный фон */
-         background: linear-gradient(145deg, #f0f7ff 0%, #e9eef5 100%);
-         font-family: 'Segoe UI', 'Roboto', 'Merriweather', Georgia, serif;
+         /* Темный футуристичный градиент */
+         background: radial-gradient(circle at 20% 20%, #0b1a26, #03080e);
+         font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
          padding: 40px 20px;
-         color: #1a2c3e;
+         color: #eaf2f9;
          min-height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
       }
 
       .page {
          max-width: 1300px;
          margin: 0 auto;
-         background: rgba(255, 255, 255, 0.92);
-         backdrop-filter: blur(1px);
-         border-radius: 48px;
-         box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.05);
-         padding: 40px 35px;
+         background: rgba(12, 25, 40, 0.65);
+         backdrop-filter: blur(12px) saturate(180%);
+         -webkit-backdrop-filter: blur(12px) saturate(180%);
+         border-radius: 64px;
+         box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(0, 255, 255, 0.08);
+         padding: 44px 40px;
+         border: 1px solid rgba(0, 255, 255, 0.12);
          transition: all 0.2s;
       }
 
-      /* Заголовки */
+      /* Заголовки с неоновым акцентом */
       h1 {
-         font-size: 2.4rem;
+         font-size: 2.6rem;
          text-align: center;
-         margin-bottom: 8px;
-         background: linear-gradient(135deg, #1e4668, #2b5c8a);
+         margin-bottom: 6px;
+         font-weight: 600;
+         letter-spacing: -0.5px;
+         background: linear-gradient(135deg, #a0f0ff, #6ad4ff, #3aa8ff);
          background-clip: text;
          -webkit-background-clip: text;
          color: transparent;
-         letter-spacing: -0.3px;
+         text-shadow: 0 0 30px rgba(0, 180, 255, 0.2);
       }
 
       .subhead {
          text-align: center;
-         font-size: 1.3rem;
-         font-weight: 500;
-         color: #2c6e9e;
-         border-bottom: 2px solid #cbdde9;
+         font-size: 1.25rem;
+         font-weight: 400;
+         color: #9fc7e6;
+         border-bottom: 2px solid rgba(0, 255, 255, 0.2);
          display: inline-block;
          width: auto;
          margin: 0 auto 35px auto;
-         padding-bottom: 8px;
+         padding-bottom: 10px;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         backdrop-filter: blur(4px);
       }
 
-      /* ДВЕ КОЛОНКИ: слева услуги + текст, справа картинка */
+      /* ДВЕ КОЛОНКИ */
       .two-columns {
          display: flex;
          gap: 48px;
@@ -63,13 +73,11 @@
          margin: 35px 0 30px;
       }
 
-      /* Левая часть: блок с услугами и ценами */
       .services-block {
          flex: 2;
          min-width: 260px;
       }
 
-      /* Правая часть: картинка + подпись */
       .image-block {
          flex: 1;
          min-width: 220px;
@@ -82,203 +90,230 @@
       .lawyer-img {
          width: 100%;
          max-width: 320px;
-         border-radius: 32px;
-         box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.3);
-         border: 4px solid white;
-         transition: transform 0.25s ease, box-shadow 0.3s;
+         border-radius: 40px;
+         box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(0, 255, 255, 0.25);
+         border: 2px solid rgba(0, 255, 255, 0.2);
+         transition: transform 0.3s ease, box-shadow 0.3s;
          object-fit: cover;
-         background: #f4f9fe;
+         background: #0d1f2d;
+         filter: brightness(0.95) contrast(1.05);
       }
 
       .lawyer-img:hover {
-         transform: scale(1.02);
-         box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.4);
+         transform: scale(1.02) translateY(-4px);
+         box-shadow: 0 30px 50px -12px #00ffff30, 0 0 0 2px #00ffff50;
       }
 
       .caption {
-         margin-top: 16px;
+         margin-top: 18px;
          font-style: italic;
-         color: #4e6b7e;
-         background: rgba(255, 255, 255, 0.7);
-         padding: 6px 14px;
+         color: #aac9e6;
+         background: rgba(0, 20, 40, 0.7);
+         backdrop-filter: blur(8px);
+         padding: 8px 22px;
          border-radius: 60px;
          font-size: 0.9rem;
-         backdrop-filter: blur(2px);
+         border: 1px solid rgba(0, 255, 255, 0.15);
+         letter-spacing: 0.3px;
       }
 
-      /* приветственный текст */
+      /* Приветственный текст — стеклянный эффект */
       .intro-text {
-         background: #eef3fc;
-         padding: 24px 28px;
-         border-radius: 36px;
+         background: rgba(0, 30, 60, 0.5);
+         backdrop-filter: blur(8px);
+         -webkit-backdrop-filter: blur(8px);
+         padding: 28px 30px;
+         border-radius: 40px;
          margin-bottom: 32px;
          font-size: 1rem;
-         line-height: 1.5;
-         color: #1f3b4c;
-         border-left: 6px solid #2b7a62;
-         box-shadow: 0 5px 12px rgba(0, 0, 0, 0.03);
+         line-height: 1.6;
+         color: #d4ecff;
+         border-left: 6px solid #00d4ff;
+         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 255, 255, 0.08);
       }
 
       .intro-text h2 {
-         font-size: 1.6rem;
-         margin-bottom: 16px;
-         color: #1f5e6e;
+         font-size: 1.7rem;
+         margin-bottom: 18px;
+         color: #8ed4ff;
          display: flex;
          align-items: center;
-         gap: 10px;
+         gap: 12px;
+         font-weight: 400;
+         letter-spacing: -0.3px;
       }
 
       .intro-text p {
-         margin-bottom: 12px;
+         margin-bottom: 14px;
       }
 
       .speciality {
-         font-weight: 600;
-         color: #1c6d5e;
-         margin-top: 12px;
+         font-weight: 500;
+         color: #7fe0ff;
+         margin-top: 16px;
+         border-top: 1px solid rgba(0, 255, 255, 0.15);
+         padding-top: 16px;
+         letter-spacing: 0.5px;
       }
 
-      /* Стили для списка услуг — аккуратные карточки */
+      /* Услуги — футуристичные карточки */
       .services-title {
-         font-size: 1.8rem;
-         font-weight: 700;
-         margin: 20px 0 20px 0;
-         color: #2c4c6c;
-         border-left: 5px solid #328f6e;
-         padding-left: 18px;
+         font-size: 1.9rem;
+         font-weight: 500;
+         margin: 20px 0 24px 0;
+         color: #b0daff;
+         border-left: 5px solid #00d4ff;
+         padding-left: 22px;
+         text-shadow: 0 0 20px rgba(0, 180, 255, 0.15);
+         letter-spacing: -0.3px;
       }
 
       .price-grid {
          display: flex;
          flex-direction: column;
-         gap: 12px;
+         gap: 14px;
          margin-bottom: 35px;
       }
 
       .service-item {
-         background: white;
-         padding: 12px 20px;
-         border-radius: 60px;
+         background: rgba(0, 25, 50, 0.6);
+         backdrop-filter: blur(6px);
+         -webkit-backdrop-filter: blur(6px);
+         padding: 14px 24px;
+         border-radius: 80px;
          display: flex;
          justify-content: space-between;
          align-items: center;
          flex-wrap: wrap;
-         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-         transition: all 0.2s;
-         border: 1px solid #dee7ef;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+         border: 1px solid rgba(0, 255, 255, 0.08);
+         transition: all 0.25s ease;
       }
 
       .service-item:hover {
-         background: #ffffff;
-         border-color: #bdd4e4;
-         box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.1);
-         transform: translateX(4px);
+         background: rgba(0, 50, 90, 0.7);
+         border-color: #00ccff80;
+         box-shadow: 0 8px 24px rgba(0, 180, 255, 0.15), 0 0 0 1px #00ccff30;
+         transform: translateX(6px) scale(1.01);
       }
 
       .service-name {
          font-size: 1rem;
-         font-weight: 600;
-         color: #1e3a4d;
-         letter-spacing: -0.2px;
+         font-weight: 500;
+         color: #d2ecff;
+         letter-spacing: 0.2px;
       }
 
       .service-price {
          font-size: 1.05rem;
-         font-weight: 700;
-         color: #216e54;
-         background: #e9f4ef;
-         padding: 4px 14px;
+         font-weight: 600;
+         color: #8effd8;
+         background: rgba(0, 255, 200, 0.08);
+         padding: 4px 18px;
          border-radius: 40px;
+         border: 1px solid rgba(0, 255, 200, 0.15);
+         backdrop-filter: blur(4px);
       }
 
-      /* контактная информация */
+      /* Контактный блок — стекло */
       .contact-block {
-         margin-top: 35px;
-         background: #e2edf7;
-         border-radius: 48px;
-         padding: 28px 30px;
+         margin-top: 40px;
+         background: rgba(0, 30, 60, 0.45);
+         backdrop-filter: blur(12px);
+         -webkit-backdrop-filter: blur(12px);
+         border-radius: 60px;
+         padding: 32px 35px;
          text-align: center;
-         box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6), 0 10px 20px -5px rgba(0,0,0,0.05);
+         border: 1px solid rgba(0, 255, 255, 0.12);
+         box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
       }
 
       .contact-block h3 {
-         font-size: 1.6rem;
-         margin-bottom: 12px;
-         color: #235b6e;
+         font-size: 1.7rem;
+         margin-bottom: 16px;
+         color: #aad4ff;
+         font-weight: 400;
+         letter-spacing: 0.5px;
       }
 
-      /* Стили для кликабельных ссылок */
+      /* Кликабельные элементы — неоновый стиль */
       .clickable-phone {
-         font-size: 1.5rem;
-         font-weight: 700;
-         letter-spacing: 1px;
-         color: #004d66;
-         background: white;
+         font-size: 1.7rem;
+         font-weight: 600;
+         letter-spacing: 2px;
+         color: #b0f0ff;
+         background: rgba(0, 20, 50, 0.7);
+         backdrop-filter: blur(6px);
          display: inline-block;
-         padding: 10px 28px;
-         border-radius: 60px;
-         margin: 12px 0;
-         font-family: monospace;
-         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+         padding: 14px 36px;
+         border-radius: 80px;
+         margin: 14px 0;
+         font-family: 'Inter', 'Segoe UI', monospace;
+         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 255, 255, 0.2);
          cursor: pointer;
-         transition: all 0.2s ease;
-         border: 2px solid transparent;
+         transition: all 0.25s ease;
+         border: 1px solid transparent;
       }
 
       .clickable-phone:hover {
-         background: #e6f4ff;
-         border-color: #2b7a62;
-         transform: scale(1.02);
-         box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+         background: rgba(0, 80, 140, 0.7);
+         border-color: #00ddff;
+         transform: scale(1.03) translateY(-2px);
+         box-shadow: 0 8px 28px rgba(0, 200, 255, 0.25);
+         color: #ffffff;
       }
 
       .clickable-phone:active {
-         transform: scale(0.98);
+         transform: scale(0.96);
       }
 
       .clickable-email {
-         font-size: 1.15rem;
-         background: #ffffffcc;
+         font-size: 1.2rem;
+         background: rgba(0, 40, 80, 0.5);
+         backdrop-filter: blur(6px);
          display: inline-block;
-         padding: 8px 24px;
-         border-radius: 40px;
-         margin-top: 8px;
-         font-weight: 500;
-         color: #1e5f70;
+         padding: 10px 30px;
+         border-radius: 60px;
+         margin-top: 10px;
+         font-weight: 400;
+         color: #b0dcff;
          text-decoration: none;
          cursor: pointer;
-         transition: all 0.2s ease;
-         border: 1px solid #c0d4e5;
+         transition: all 0.25s ease;
+         border: 1px solid rgba(0, 255, 255, 0.15);
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
 
       .clickable-email:hover {
-         background: white;
-         border-color: #2b7a62;
+         background: rgba(0, 80, 160, 0.6);
+         border-color: #00ddff;
          transform: scale(1.02);
-         box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+         box-shadow: 0 6px 20px rgba(0, 200, 255, 0.2);
+         color: white;
       }
 
-      /* Уведомление (тост) */
+      /* Тост */
       .toast-notification {
          position: fixed;
          bottom: 30px;
          left: 50%;
          transform: translateX(-50%) translateY(100px);
-         background: #1e4668;
-         color: white;
-         padding: 12px 28px;
-         border-radius: 60px;
+         background: rgba(0, 40, 80, 0.9);
+         backdrop-filter: blur(16px);
+         -webkit-backdrop-filter: blur(16px);
+         color: #d4f4ff;
+         padding: 14px 32px;
+         border-radius: 80px;
          font-size: 1rem;
          font-weight: 500;
-         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 255, 255, 0.2);
          z-index: 1000;
          opacity: 0;
-         transition: all 0.3s ease;
+         transition: all 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.2);
          pointer-events: none;
          white-space: nowrap;
-         backdrop-filter: blur(8px);
-         background: rgba(30, 70, 104, 0.95);
          font-family: 'Segoe UI', sans-serif;
+         border: 1px solid rgba(0, 255, 255, 0.15);
       }
 
       .toast-notification.show {
@@ -287,16 +322,27 @@
       }
 
       .small-note {
-         margin-top: 20px;
+         margin-top: 22px;
          font-size: 0.85rem;
-         color: #4d6a7e;
+         color: #8bb4d6;
+         opacity: 0.7;
+         letter-spacing: 0.3px;
       }
 
       hr {
-         margin: 25px 0 10px;
+         margin: 30px 0 12px;
          border: none;
-         height: 2px;
-         background: linear-gradient(to right, #c0d4e5, transparent);
+         height: 1px;
+         background: linear-gradient(to right, rgba(0, 255, 255, 0.2), transparent);
+      }
+
+      .footer-copy {
+         text-align: center;
+         font-size: 0.75rem;
+         color: #5a85aa;
+         margin-top: 16px;
+         letter-spacing: 1px;
+         opacity: 0.6;
       }
 
       @media (max-width: 880px) {
@@ -311,15 +357,26 @@
             order: 2;
          }
          .page {
-            padding: 25px 20px;
+            padding: 28px 20px;
          }
          .service-item {
-            border-radius: 28px;
+            border-radius: 40px;
          }
          .toast-notification {
-            white-space: nowrap;
+            white-space: normal;
             font-size: 0.9rem;
-            padding: 10px 20px;
+            padding: 12px 20px;
+            max-width: 90%;
+         }
+         h1 {
+            font-size: 2rem;
+         }
+         .contact-block {
+            padding: 24px 18px;
+         }
+         .clickable-phone {
+            font-size: 1.3rem;
+            padding: 12px 24px;
          }
       }
    </style>
@@ -331,84 +388,71 @@
       <div class="subhead">Ваш надёжный юридический партнёр</div>
    </div>
 
-   <!-- ДВЕ КОЛОНКИ: слева контент / справа ФОТО -->
+   <!-- ДВЕ КОЛОНКИ -->
    <div class="two-columns">
-      <!-- Левая основная часть (текст+услуги) -->
       <div class="services-block">
          <div class="intro-text">
-            <h2>📋 Здравствуйте!</h2>
-            <p>Я <strong>Александр Владимирович Паршаков</strong> — юрист с многолетней практикой в гражданско-правовых вопросах. 
+            <h2>⚡ Здравствуйте!</h2>
+            <p>Я <strong style="color: #8ed4ff;">Александр Владимирович Паршаков</strong> — юрист с многолетней практикой в гражданско-правовых вопросах. 
             Моя задача — обеспечить квалифицированную защиту ваших прав и интересов. Работаю как с частными лицами, так и с бизнесом.</p>
-            <p><strong>🎯 Основные направления деятельности:</strong> Корпоративное право и сопровождение бизнеса, споры по недвижимости, 
-            семейное и наследственное право, общее гражданское право (взыскание долгов, возмещение ущерба, защита прав потребителей). 
-            Также я готовлю исковые заявления, жалобы, ходатайства и представляю интересы в судах всех инстанций.</p>
+            <p><strong style="color: #8ed4ff;">🎯 Основные направления:</strong> Корпоративное право, споры по недвижимости, 
+            семейное и наследственное право, взыскание долгов, защита прав потребителей. 
+            Готовлю исковые заявления, жалобы, ходатайства и представляю интересы в судах всех инстанций.</p>
             <div class="speciality">⚖️ Ваша уверенность — моя профессиональная ответственность.</div>
          </div>
 
-         <!-- Виды услуг -->
          <div class="services-title">📌 Виды предоставляемых услуг</div>
          <div class="price-grid">
             <div class="service-item"><span class="service-name">✍️ Консультация (письменная)</span><span class="service-price">от 1 500 ₽</span></div>
             <div class="service-item"><span class="service-name">🤝 Досудебное урегулирование</span><span class="service-price">от 5 000 ₽</span></div>
             <div class="service-item"><span class="service-name">🏛️ Представительство в суде</span><span class="service-price">от 8 000 ₽</span></div>
-            <div class="service-item"><span class="service-name">📜 Составление претензии / искового заявления</span><span class="service-price">от 5 000 ₽</span></div>
+            <div class="service-item"><span class="service-name">📜 Составление претензии / иска</span><span class="service-price">от 5 000 ₽</span></div>
             <div class="service-item"><span class="service-name">🔍 Проверка и анализ договора</span><span class="service-price">от 5 000 ₽</span></div>
-            <div class="service-item"><span class="service-name">📢 Составление жалобы в госорганы</span><span class="service-price">от 5 000 ₽</span></div>
-            <div class="service-item"><span class="service-name">📑 Анализ и экспертиза документов</span><span class="service-price">от 5 000 ₽</span></div>
-            <div class="service-item"><span class="service-name">⚖️ Составление апелляционной / кассационной жалобы</span><span class="service-price">от 5 000 ₽</span></div>
-            <div class="service-item"><span class="service-name">📌 Составление ходатайства</span><span class="service-price">от 5 000 ₽</span></div>
-            <div class="service-item"><span class="service-name">🖋️ Составление доверенности</span><span class="service-price">от 5 000 ₽</span></div>
-            <div class="service-item"><span class="service-name">🏛️ Составление заявления в суд</span><span class="service-price">от 5 000 ₽</span></div>
-            <div class="service-item"><span class="service-name">🤝 Составление мирового соглашения</span><span class="service-price">от 5 000 ₽</span></div>
+            <div class="service-item"><span class="service-name">📢 Жалоба в госорганы</span><span class="service-price">от 5 000 ₽</span></div>
+            <div class="service-item"><span class="service-name">📑 Экспертиза документов</span><span class="service-price">от 5 000 ₽</span></div>
+            <div class="service-item"><span class="service-name">⚖️ Апелляционная / кассационная жалоба</span><span class="service-price">от 5 000 ₽</span></div>
+            <div class="service-item"><span class="service-name">📌 Ходатайство</span><span class="service-price">от 5 000 ₽</span></div>
+            <div class="service-item"><span class="service-name">🖋️ Доверенность</span><span class="service-price">от 5 000 ₽</span></div>
+            <div class="service-item"><span class="service-name">🏛️ Заявление в суд</span><span class="service-price">от 5 000 ₽</span></div>
+            <div class="service-item"><span class="service-name">🤝 Мировое соглашение</span><span class="service-price">от 5 000 ₽</span></div>
          </div>
       </div>
 
-      <!-- Правая часть: картинка (Ваше фото) -->
+      <!-- Правая часть: фото -->
       <div class="image-block">
-         <img class="lawyer-img" src="IMG_1641.jpg" alt="Александр Владимирович Паршаков, юрист" onerror="this.onerror=null; this.src='https://placehold.co/400x500/eef2f5/2c5f7d?text=Александр+В.+Паршаков'; this.style.objectFit='cover';">
-         <div class="caption">Александр Владимирович Паршаков — защита ваших прав</div>
+         <img class="lawyer-img" src="IMG_1641.jpg" alt="Александр Владимирович Паршаков, юрист" onerror="this.onerror=null; this.src='https://placehold.co/400x500/0b1a26/6ad4ff?text=Александр+В.+Паршаков'; this.style.objectFit='cover';">
+         <div class="caption">Александр В. Паршаков — защита ваших прав</div>
       </div>
    </div>
 
-   <!-- Контактный блок с кликабельными элементами -->
+   <!-- Контактный блок -->
    <div class="contact-block">
-      <h3>📞 Свяжитесь со мной удобным способом</h3>
-      <!-- Телефон: клик → копирование + уведомление -->
+      <h3>📞 Свяжитесь со мной</h3>
       <div class="clickable-phone" id="phoneNumber">+7-903-995-99-28</div>
-      <!-- Почта: клик → открытие почтового клиента (реальный адрес) -->
       <a href="mailto:aleksandr_19_84@mail.ru" class="clickable-email" id="emailLink">📧 aleksandr_19_84@mail.ru</a>
-      <div class="small-note">📱 Нажмите на номер телефона, чтобы скопировать его | Нажмите на почту, чтобы написать</div>
+      <div class="small-note">📱 Нажмите на номер, чтобы скопировать | Нажмите на почту, чтобы написать</div>
    </div>
    <hr />
-   <div style="text-align: center; font-size: 0.75rem; color: #5e7e97; margin-top: 12px;">© Александр Владимирович Паршаков | Юридические услуги с гарантией результата</div>
+   <div class="footer-copy">© Александр Владимирович Паршаков | Юридические услуги с гарантией результата</div>
 </div>
 
-<!-- Уведомление (тост) -->
+<!-- Уведомление -->
 <div id="copyToast" class="toast-notification">✅ Номер скопирован</div>
 
 <script>
    (function() {
-      // Элементы
       const phoneElement = document.getElementById('phoneNumber');
       const toast = document.getElementById('copyToast');
       
-      // Функция показа уведомления
       function showNotification(message) {
          if (!toast) return;
          toast.textContent = message || '✅ Номер скопирован';
          toast.classList.add('show');
-         
          setTimeout(() => {
             toast.classList.remove('show');
-            setTimeout(() => {
-               if (toast.textContent !== '✅ Номер скопирован') {
-                  toast.textContent = '✅ Номер скопирован';
-               }
-            }, 300);
-         }, 2000);
+         }, 2200);
       }
       
-      // Функция копирования текста в буфер обмена
       async function copyToClipboard(text) {
          try {
             await navigator.clipboard.writeText(text);
@@ -424,17 +468,12 @@
          }
       }
       
-      // Обработчик клика по номеру телефона
       if (phoneElement) {
          phoneElement.addEventListener('click', async (event) => {
             event.preventDefault();
-            let phoneNumber = phoneElement.innerText.trim();
+            const phoneNumber = phoneElement.innerText.trim();
             const success = await copyToClipboard(phoneNumber);
-            if (success) {
-               showNotification('✅ Номер скопирован');
-            } else {
-               showNotification('❌ Не удалось скопировать');
-            }
+            showNotification(success ? '✅ Номер скопирован' : '❌ Не удалось скопировать');
          });
       }
    })();
